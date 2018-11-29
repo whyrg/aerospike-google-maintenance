@@ -14,6 +14,8 @@ asinfo (from aerospike-tools)
 
 # Running
 
+This script should run on every Aerospike node, as maintenance events are local to each VM.
+
 run with nohup:
 
 ```
