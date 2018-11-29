@@ -25,11 +25,11 @@ nohup ./maintenance.py &
 # Parameters:
 
 ```
-usage: maintenance.py [-h] [-o OPTIONS [OPTIONS ...]]
+usage: maintenance.py [-h] [-o OPTIONS]
 
 optional arguments:
   -h, --help            show this help message and exit
-  -o OPTIONS [OPTIONS ...], --options OPTIONS [OPTIONS ...]
+  -o OPTIONS, --options OPTIONS
                         Additional options to pass into asinfo. Can be
                         anything except commands, ie: "-v $COMMAND". Entire
                         string must be quoted, eg: -o="-u admin -p admin"
