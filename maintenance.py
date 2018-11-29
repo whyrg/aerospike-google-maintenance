@@ -34,7 +34,7 @@ parser.add_argument("-o",
                     "--options",
                     dest = "options",
                     default = "",
-                    help = "Additional options to pass into asinfo. Can be anything except commands, ie: \"-v $COMMAND\". Entire string must be quoted, eg: -o=""-u admin -p admin\"")
+                    help = "Additional options to pass into asinfo. Can be anything except commands, ie: \"-v $COMMAND\". Entire string must be quoted, eg: -o=\"-u admin -p admin\"")
 
 args = parser.parse_args()
 
