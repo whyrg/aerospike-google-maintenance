@@ -43,6 +43,7 @@ print args.options
 METADATA_URL = 'http://metadata.google.internal/computeMetadata/v1/'
 METADATA_HEADERS = {'Metadata-Flavor': 'Google'}
 ASINFO = "/usr/bin/asinfo"
+ASADM = "/usr/bin/asadm"
 
 
 def wait_for_maintenance(callback):
@@ -89,6 +90,8 @@ def maintenance_callback(event):
     else:
         # print('Finished host maintenance')
         call([ASINFO, "-v", "quiesce-undo:"].extend(args.options.split()))
+
+    call([ASADM, "-e", "recluster:"].extend(args.options.split()))
 
 
 def main():
