@@ -85,10 +85,10 @@ def maintenance_callback(event):
     if event:
         # print('Undergoing host maintenance: {}'.format(event))
         # realistically, any sort of maintenence event should drain aerospike
-        call([ASINFO, "-v", "quiesce"].extend(args.options.split()))
+        call([ASINFO, "-v", "quiesce:"].extend(args.options.split()))
     else:
         # print('Finished host maintenance')
-        call([ASINFO, "-v", "quiesce-undo"].extend(args.options.split()))
+        call([ASINFO, "-v", "quiesce-undo:"].extend(args.options.split()))
 
 
 def main():
